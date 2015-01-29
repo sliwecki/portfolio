@@ -20,4 +20,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  footer:
+    copyright: "Copyright &copy; 2015 sliwecki.pl"

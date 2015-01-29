@@ -19,14 +19,14 @@
 			preventSubmit: true, // stop the form submit event from firing if validation fails
 			submitError: false, // function called if there is an error when trying to submit
 			submitSuccess: false, // function called just before a successful submit event is sent to the server
-            semanticallyStrict: false, // set to true to tidy up generated HTML output
+      semanticallyStrict: false, // set to true to tidy up generated HTML output
 			autoAdd: {
 				helpBlocks: true
 			},
-            filter: function () {
-                // return $(this).is(":visible"); // only validate elements you can see
-                return true; // validate everything
-            }
+      filter: function () {
+          // return $(this).is(":visible"); // only validate elements you can see
+          return true; // validate everything
+      }
 		},
     methods: {
       init : function( options ) {
@@ -46,7 +46,7 @@
         $(uniqueForms).bind("submit", function (e) {
           var $form = $(this);
           var warningsFound = 0;
-          var $inputs = $form.find("input,textarea,select").not("[type=submit],[type=image]").filter(settings.options.filter);
+          var $inputs = $form.find("input,textarea,select").not("[type=submit],[type=image],[type=text],[type=tel]").filter(settings.options.filter);
           $inputs.trigger("submit.validation").trigger("validationLostFocus.validation");
 
           $inputs.each(function (i, el) {
@@ -437,16 +437,7 @@
               return $this.triggerHandler("change.validation", {submitting: true});
             }
           );
-          $this.bind(
-            [
-              "keyup",
-              "focus",
-              "blur",
-              "click",
-              "keydown",
-              "keypress",
-              "change"
-            ].join(".validation ") + ".validation",
+          $this.bind(["change"].join(".validation ") + ".validation",
             function (e, params) {
 
               var value = getValue($this);
@@ -478,7 +469,7 @@
                 // How many errors did we find?
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                   // Only one? Being strict? Just output it.
-                  $helpBlock.html(errorsFound[0] + 
+                  $helpBlock.html(errorsFound[0] +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.

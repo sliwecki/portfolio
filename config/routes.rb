@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   resources :home, only: :index
+
+  post :send_message, to: 'home#send_message'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
