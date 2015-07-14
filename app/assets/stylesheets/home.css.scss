@@ -1,4 +1,5 @@
 body {
+    background-color: #f8f8f8;
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -107,6 +108,58 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-primary .badge {
+    color: rgb(209, 62, 68);
+    background-color: #fff;
+}
+
+.btn-xl2 {
+    padding: 20px 40px;
+    border-color: rgb(209, 62, 68); /*rgb(209, 62, 68);*/
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(209, 62, 68);
+}
+
+.btn-xl2:hover,
+.btn-xl2:focus,
+.btn-xl2:active,
+.btn-xl2.active,
+.open .dropdown-toggle.btn-xl2 {
+    border-color: rgb(209, 62, 68); /*#f6bf01;*/
+    color: #fff;
+    background-color: rgb(209, 62, 68); /*#fec503;*/
+}
+
+.btn-xl2:active,
+.btn-xl2.active,
+.open .dropdown-toggle.btn-xl2 {
+    background-image: none;
+}
+
+.btn-xl2.disabled,
+.btn-xl2[disabled],
+fieldset[disabled] .btn-xl2,
+.btn-xl2.disabled:hover,
+.btn-xl2[disabled]:hover,
+fieldset[disabled] .btn-xl2:hover,
+.btn-xl2.disabled:focus,
+.btn-xl2[disabled]:focus,
+fieldset[disabled] .btn-xl2:focus,
+.btn-xl2.disabled:active,
+.btn-xl2[disabled]:active,
+fieldset[disabled] .btn-xl2:active,
+.btn-xl2.disabled.active,
+.btn-xl2[disabled].active,
+fieldset[disabled] .btn-xl2.active {
+    border-color: rgb(209, 62, 68);
+    background-color: rgb(209, 62, 68);
+}
+
+.btn-xl2 .badge {
     color: rgb(209, 62, 68);
     background-color: #fff;
 }
@@ -396,7 +449,6 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: #fff;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -645,17 +697,6 @@ aside.clients img {
     margin: 50px auto;
 }
 
-section#contact {
-    background-color: #222;
-    background-image: url(asset-path('map-image.png'));
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-section#contact .section-heading {
-    color: #fff;
-}
-
 section#contact .form-group {
     margin-bottom: 25px;
 }
@@ -674,7 +715,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-    border-color: rgb(209, 62, 68);
+    border-color: black;
     box-shadow: none;
 }
 
@@ -711,6 +752,8 @@ section#contact .text-danger {
 }
 
 footer {
+    color: white;
+    background-color: #333;
     padding: 25px 0;
     text-align: center;
 }
@@ -760,82 +803,6 @@ ul.social-buttons li a:active {
 .btn.active,
 .btn:active:focus {
     outline: 0;
-}
-
-.portfolio-modal .modal-content {
-    padding: 100px 0;
-    min-height: 100%;
-    border: 0;
-    border-radius: 0;
-    text-align: center;
-    background-clip: border-box;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.portfolio-modal .modal-content h2 {
-    margin-bottom: 15px;
-    font-size: 3em;
-}
-
-.portfolio-modal .modal-content p {
-    margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content p.item-intro {
-    margin: 20px 0 30px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-}
-
-.portfolio-modal .modal-content ul.list-inline {
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content img {
-    margin-bottom: 30px;
-}
-
-.portfolio-modal .close-modal {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 75px;
-    height: 75px;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.portfolio-modal .close-modal:hover {
-    opacity: .3;
-}
-
-.portfolio-modal .close-modal .lr {
-    z-index: 1051;
-    width: 1px;
-    height: 75px;
-    margin-left: 35px;
-    background-color: #222;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.portfolio-modal .close-modal .lr .rl {
-    z-index: 1052;
-    width: 1px;
-    height: 75px;
-    background-color: #222;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.portfolio-modal .modal-backdrop {
-    display: none;
-    opacity: 0;
 }
 
 ::-moz-selection {

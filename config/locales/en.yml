@@ -21,4 +21,4 @@
 
 en:
   footer:
-    copyright: "Copyright &copy; 2015 sliwecki.pl"
+    copyright: "Copyright &copy; %{year} sliwecki.pl"

@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def copyright
-    I18n.t(:copyright, scope: 'footer').html_safe
+    I18n.t(:copyright, scope: 'footer', year: Date.today.year).html_safe
   end
 
   def facebook_url

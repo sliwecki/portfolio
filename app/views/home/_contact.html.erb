@@ -3,7 +3,6 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Contact</h2>
-        <h3 class="section-subheading text-muted">Can you any questions? Write me a message.</h3>
       </div>
     </div>
     <div class="row">
@@ -11,33 +10,23 @@
         <%= form_for(@form, as: :form_data, url: send_message_path, html: { name: "sentMessage", id: "contactForm", novalidate: true}) do |form| %>
         <form name="sentMessage" id="contactForm" novalidate>
           <div class="row">
-            <div class="col-md-6">
+
+
+            <div class="col-md-offset-3 col-md-6">
               <div class="form-group">
                 <%= form.email_field :email, placeholder: "Your Email *", class: "form-control", id: "email", data: { :'validation-required-message' => "Please enter your email address.", required: true } %>
                 <p class="help-block text-danger"></p>
               </div>
-
-              <div class="form-group">
-                <%= form.text_field :name, placeholder: "Your Name", class: "form-control", id: "name" %>
-                <p class="help-block text-danger"></p>
-              </div>
-
-              <div class="form-group">
-                <%= form.phone_field :phone_number, placeholder: "Your Phone", class: "form-control", id: "phone" %>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-
-            <div class="col-md-6">
               <div class="form-group">
                 <%= form.text_area :message, placeholder: "Your Message *", class: "form-control", id: "message", data: { :'validation-required-message' => "Please enter a message.", required: true } %>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <%= form.button "Send Message", class: "btn btn-xl" %>
+              <%= form.button "Send Message", class: "btn btn-xl2" %>
             </div>
           </div>
         <% end %>
