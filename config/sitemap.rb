@@ -1,12 +1,12 @@
 # Change this to your host. See the readme at https://github.com/lassebunk/dynamic_sitemaps
 # for examples of multiple hosts and folders.
-host A9n.root_host
+# host A9n.root_host
 
-sitemap :site do
-  url root_url, last_mod: Time.now, change_freq: "daily", priority: 1.0
-end
+# sitemap :site do
+#   url root_url, last_mod: Time.now, change_freq: "daily", priority: 1.0
+# end
 
-ping_with "http://#{host}/sitemap.xml"
+# ping_with "http://#{host}/sitemap.xml"
 
 # You can have multiple sitemaps like the above – just make sure their names are different.
 
