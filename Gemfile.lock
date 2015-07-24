@@ -47,6 +47,7 @@ GEM
     coffee-script-source (1.8.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    dynamic_sitemaps (2.0.0)
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -142,6 +143,7 @@ PLATFORMS
 DEPENDENCIES
   a9n
   coffee-rails (~> 4.0.0)
+  dynamic_sitemaps
   jbuilder (~> 2.0)
   jquery-easing-rails
   jquery-rails

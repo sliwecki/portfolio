@@ -1,4 +1,5 @@
 defaults:
+  root_host: 'www.sliwecki.pl'
   site_name: 'Portfolio'
   facebook_url: "https://www.facebook.com/damian.sliwecki"
   twitter_url: "https://twitter.com/DamianSliwecki"
